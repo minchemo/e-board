@@ -1,0 +1,6 @@
+@function size($size) {
+    $size_: calc(100vw * $size / 1920);
+    @return #{$size_};
+}
+
+$bg-classroom: #232323;

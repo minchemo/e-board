@@ -1,7 +1,7 @@
 <template>
     <div>
         產品
-    <Nav />
+    <Nav :theme="'product-theme'" />
     </div>
 </template>
 

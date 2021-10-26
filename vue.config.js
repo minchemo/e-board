@@ -4,6 +4,7 @@ module.exports = {
             sass: {
                 additionalData: `
             @import "@/scss/size.scss";
+            @import "@/scss/reset.scss";
           `
             }
         }

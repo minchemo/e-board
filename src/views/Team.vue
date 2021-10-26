@@ -1,7 +1,7 @@
 <template>
   <div>
     團隊介紹
-    <Nav />
+    <Nav :theme="'team-theme'"/>
   </div>
 </template>
 

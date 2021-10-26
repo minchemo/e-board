@@ -1,7 +1,7 @@
 <template>
     <div>
         周邊環境
-    <Nav />
+    <Nav :theme="'env-theme'"/>
     </div>
 </template>
 

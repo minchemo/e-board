@@ -2,22 +2,22 @@
 
 - 使用方法
 
-`
+    
 yarn
 
 or
 
 npm i
-`
 
-`
+
+
 yarn build
 
 or 
 
 npm build
-`
 
-`
+
+
 打開 dist/index.html
-`
+    

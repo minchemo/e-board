@@ -2,22 +2,22 @@
 
 - 使用方法
 
-    
-yarn
+
+`yarn`
 
 or
 
-npm i
+`npm i`
 
 
 
-yarn build
+`yarn build`
 
 or 
 
-npm build
+`npm build`
 
 
 
-打開 dist/index.html
+`打開 dist/index.html`
     

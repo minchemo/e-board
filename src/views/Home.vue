@@ -40,6 +40,7 @@ export default {
   components: {
     Nav,
   },
-  mounted() {},
+  mounted() {
+  },
 };
 </script>

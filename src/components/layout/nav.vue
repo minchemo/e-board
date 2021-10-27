@@ -1,27 +1,40 @@
 <template>
-  <div class="navigation active" ref="navigation">
-    <div class="nav" ref="nav">
-      <router-link
-        class="nav-item"
-        :to="nav.path + '/1'"
-        v-for="nav in navList"
-        :key="nav.title"
-        v-bind:class="{ selected: $props.theme == nav.themeName }"
-      >
-        <div class="nav-icon">
-          <img :src="nav.icon" alt="" srcset="" />
-        </div>
-        <div class="nav-title">{{ nav.title }}</div>
-      </router-link>
-    </div>
-    <div class="subnavbar" ref="subnavbar" v-if="subnavList.length > 0">
-      <template v-for="nav in subnavList">
-        <router-link :key="nav.title" :to="nav.path" class="item">
-          <div class="title">
-            {{ nav.title }}
+  <div>
+    <div
+      class="navigation"
+      ref="navigation"
+      v-bind:class="{ active: $store.state.navOpen, [saveTheme]: saveTheme }"
+    >
+      <div class="nav" ref="nav">
+        <router-link
+          class="nav-item"
+          :to="nav.path + '/1'"
+          v-for="nav in navList"
+          :key="nav.title"
+          v-bind:class="{ selected: $props.theme == nav.themeName }"
+        >
+          <div class="nav-icon">
+            <img :src="nav.icon" alt="" srcset="" />
           </div>
+          <div class="nav-title">{{ nav.title }}</div>
         </router-link>
-      </template>
+      </div>
+      <div class="subnavbar" ref="subnavbar" v-if="subnavList.length > 0">
+        <template v-for="nav in subnavList">
+          <router-link :key="nav.title" :to="nav.path" class="item">
+            <div class="title">
+              {{ nav.title }}
+            </div>
+          </router-link>
+        </template>
+      </div>
+    </div>
+    <div
+      class="show-navigation"
+      v-bind:class="{ active: !$store.state.navOpen }"
+      @click="$store.commit('toggleNavbar', true)"
+    >
+      <img src="@/assets/layout/nav-hide.svg" alt="" srcset="" />
     </div>
   </div>
 </template>
@@ -258,6 +271,28 @@
   }
   // theme end
 }
+.show-navigation {
+  position: fixed;
+  z-index: 10;
+  width: size(228.5);
+  height: size(30.17);
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 150%);
+  transition: all 0.3s;
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
+  img {
+    width: 100%;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.8));
+  }
+  &.active {
+    transform: translate(-50%, 0%);
+  }
+  &:hover {
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5));
+  }
+}
 </style>
 
 <script>
@@ -278,15 +313,24 @@ export default {
       );
       return nav ? nav.children : [];
     },
-    // currentRoute() {
-    //   return this.$route.matched[0].path;
-    // },
+    navOpen() {
+      return this.$store.state.navOpen;
+    },
+    saveTheme() {
+      return this.$props.theme;
+    },
   },
-  data() {
-    return {};
+  watch: {
+    navOpen(newVal, oldVal) {
+      if (newVal == true) {
+        this.$refs.navigation.classList.add(this.saveTheme);
+      }
+    },
   },
   mounted() {
-    this.$refs.navigation.classList.add(this.$props.theme);
+    setTimeout(() => {
+      this.$store.commit("toggleNavbar", true);
+    }, 500);
   },
 };
 </script>

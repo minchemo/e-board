@@ -3,14 +3,7 @@ import App from './App.vue'
 
 import "normalize.css"
 
-/**
- * vuex
- */
-import Vuex from 'vuex'
-Vue.use(Vuex)
-const store = new Vuex.Store({
-  state: {}
-})
+import store from '../src/store'
 
 /**
  * router

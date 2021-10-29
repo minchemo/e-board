@@ -6,9 +6,6 @@ import Home from '../views/Home.vue'
 import Env from '../views/Env.vue'
 
 import Product from '../views/Product.vue'
-import ProductInfo from '../components/product/info.vue';
-import ProductPlan from '../components/product/plan.vue';
-import ProductTexture from '../components/product/texture.vue';
 
 import Team from '../views/Team.vue'
 
@@ -104,19 +101,19 @@ const routes = [{
                 title: "基本資料",
                 name: "基本資料",
                 path: '/product/1',
-                component: ProductInfo
+                component: Product
             },
             {
                 title: "傢配圖",
                 name: "傢配圖",
                 path: '/product/2',
-                component: ProductPlan
+                component: Product
             },
             {
                 title: "建材",
                 name: "建材",
                 path: '/product/3',
-                component: ProductTexture
+                component: Product
             },
         ]
     }

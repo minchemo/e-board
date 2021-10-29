@@ -321,7 +321,7 @@ export default {
           ],
         },
       ],
-      detailOpened: true,
+      detailOpened: false,
     }
   },
   computed: {

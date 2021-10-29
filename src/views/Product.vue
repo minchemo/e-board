@@ -1,6 +1,8 @@
 <template>
   <div class="product">
-    產品
+    <ProductInfo v-if="$route.name == '基本資料'" />
+    <ProductPlan v-else-if="$route.name == '傢配圖'" />
+    <ProductTexture v-else-if="$route.name == '建材'" />
     <div class="bg"></div>
     <Nav :theme="'product-theme'" />
   </div>
@@ -24,11 +26,18 @@
 </style>
 
 <script>
+import ProductInfo from '../components/product/info.vue';
+import ProductPlan from '../components/product/plan.vue';
+import ProductTexture from '../components/product/texture.vue';
+
 import Nav from "../components/layout/nav.vue";
 export default {
   name: "Product",
   components: {
     Nav,
+    ProductInfo,
+    ProductPlan,
+    ProductTexture
   },
 };
 </script>

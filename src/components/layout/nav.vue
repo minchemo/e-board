@@ -28,6 +28,11 @@
           </router-link>
         </template>
       </div>
+      <div class="logo">
+        <router-link to="/">
+          <img src="@/assets/layout/logo.png" alt="" srcset="" />
+        </router-link>
+      </div>
     </div>
     <div
       class="show-navigation"
@@ -42,12 +47,12 @@
 <style lang="scss" scoped>
 .navigation {
   left: 0;
-  top: 0;
+  bottom: 0;
   position: fixed;
   width: 100%;
-  height: 100%;
+  height: 22%;
   z-index: 10;
-  transform: translateY(50%);
+  transform: translateY(150%);
   transition: all 0.5s;
 
   &.active {
@@ -61,7 +66,7 @@
     background: #fff;
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.4));
     border-radius: size(30);
-    bottom: 5%;
+    bottom: size(30);
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -97,7 +102,7 @@
     height: size(74.81);
     display: flex;
     align-items: center;
-    bottom: 18%;
+    bottom: size(150);
     left: 50%;
     background: #fff;
     filter: drop-shadow(0 0 size(5) rgba(0, 0, 0, 0.4));
@@ -134,6 +139,14 @@
         bottom: -30%;
         transition: all 0.4s;
       }
+    }
+  }
+  .logo {
+    position: absolute;
+    left: size(30);
+    bottom: size(30);
+    img {
+      width: size(230);
     }
   }
 

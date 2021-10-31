@@ -35,7 +35,13 @@
           </div>
         </div>
         <div class="content" v-html="activaTab.content"></div>
-        <img class="qr" v-if="activaTab.qr" :src="activaTab.qr" alt="" srcset="" />
+        <img
+          class="qr"
+          v-if="activaTab.qr"
+          :src="activaTab.qr"
+          alt=""
+          srcset=""
+        />
       </div>
       <div class="close">
         <img
@@ -178,7 +184,7 @@
     transform-origin: top;
     background: rgba(255, 255, 255, 0.7);
     z-index: 9;
-    padding: size(60) size(40) size(40) size(40);
+    padding: size(60) size(10) size(40) size(10);
     box-sizing: border-box;
     transition: all 0.2s;
     &.active {
@@ -198,6 +204,9 @@
 
     .detail-content {
       position: relative;
+      max-height: 50vh;
+      overflow: auto;
+      padding: 0 size(30);
       .title {
         font-size: size(25);
       }
@@ -238,6 +247,15 @@
     }
   }
 }
+
+@media screen and (max-width: 1366px) {
+  .qr {
+    width: size(100);
+  }
+  .works {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
 </style>
 
 <script>
@@ -274,7 +292,6 @@ export default {
           content: `引用北歐簡約的空間基調，整體以暖白、木質地、莫蘭迪色系呈現，大量引入溫暖的日光，室內倒映出舒適的清新粉綠光影。<br/>在公領域客廳中，電視牆與電器櫃整併設計處理，拓寬主牆視覺感並於視線對立面下重點跳色，讓空間年輕活潑化。開放式餐廚區延伸廚具台面與餐桌做連結，於小戶型中營造出輕食吧檯的意象，放大儲物空間與機能性。<br/>臥室空間延續整體設計風格，將木質面積擴大，局部帶入大地色系，呈現出溫暖的起居空間，規劃多樣使用機能的更衣室，提升整體坪效利用。次臥的空間定義為多功能使用空間，以靈活性作為主要導向，使空間能滿足客房、小孩房、和室、書房多樣機能需求，收納空間極大化利用。`,
           imgs: [
             require('@/assets/team/s4/1-1.jpg'),
-            require('@/assets/team/s4/1-2.jpg'),
             require('@/assets/team/s4/1-3.jpg'),
           ],
           qr: require('@/assets/team/s4/1-qr.svg'),

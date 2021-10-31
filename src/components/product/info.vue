@@ -84,7 +84,7 @@ export default {
       info: [
         {
           key: "案名",
-          val: "長虹交響苑"
+          val: "交響苑"
         },
         {
           key: " ",

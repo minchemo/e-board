@@ -21,8 +21,21 @@
       </template>
     </div>
     <div class="detailPopup" v-bind:class="{ active: selectedTexture != '' }">
-      <img class="content" :src="selectedTextureContent" alt="" srcset="" />
+      <template v-for="(content, i) in selectedTextureContent">
+        <img
+          class="content"
+          :src="content.url"
+          alt=""
+          srcset=""
+          :key="i"
+          v-if="content.type == 'img'"
+        />
+        <video class="video-content" controls v-else :key="i">
+          <source :src="content.url" type="video/mp4" />
+        </video>
+      </template>
     </div>
+
     <img
       v-bind:class="{ active: selectedTexture != '' }"
       class="close"
@@ -114,6 +127,11 @@
     margin: 0 auto;
   }
 
+  .video-content {
+    width: 70%;
+    margin: size(100) 0;
+  }
+
   &.active {
     transform: translate(-50%, -50%);
   }
@@ -134,6 +152,26 @@
     transform: translateX(0%);
   }
 }
+
+@media screen and (max-width: 1366px) {
+  .texture {
+    .texture-item {
+      .title {
+        align-items: flex-start;
+        .name {
+          font-weight: 500;
+          font-size: size(28);
+          transition: all 0.3s;
+          width: 45%;
+        }
+        .en {
+          font-size: size(15);
+          transition: all 0.3s;
+        }
+      }
+    }
+  }
+}
 </style>
 
 <script>
@@ -146,49 +184,97 @@ export default {
           name: '制震器',
           en: 'GRAST vibration control',
           cover: require('@/assets/product/texture/1.jpg'),
-          content: require('@/assets/product/texture/1-1.jpg')
+          content: [
+            {
+              type: 'img',
+              url: require('@/assets/product/texture/1-1.jpg')
+            },
+            {
+              type: 'video',
+              url: require('@/assets/product/texture/1-2.mp4')
+            },
+            {
+              type: 'img',
+              url: require('@/assets/product/texture/1-3.jpg')
+            }
+          ]
         },
         {
           name: '電子鎖',
           en: 'CISA Lock',
           cover: require('@/assets/product/texture/2.jpg'),
-          content: require('@/assets/product/texture/2-1.jpg')
+          content: [
+            {
+              type: 'img',
+              url: require('@/assets/product/texture/2-1.jpg')
+            }
+          ]
         },
         {
           name: '通訊',
           en: 'GRAST vibration control',
           cover: require('@/assets/product/texture/3.jpg'),
-          content: require('@/assets/product/texture/3-1.jpg')
+          content: [
+            {
+              type: 'img',
+              url: require('@/assets/product/texture/3-1.jpg')
+            }
+          ]
         },
         {
           name: '電梯',
           en: 'GFC elevators',
           cover: require('@/assets/product/texture/4.jpg'),
-          content: require('@/assets/product/texture/4-1.jpg')
+          content: [
+            {
+              type: 'img',
+              url: require('@/assets/product/texture/4-1.jpg')
+            }
+          ]
         },
         {
           name: '網路',
           en: 'GRAST vibration control',
           cover: require('@/assets/product/texture/5.jpg'),
-          content: require('@/assets/product/texture/5-1.jpg')
+          content: [
+            {
+              type: 'img',
+              url: require('@/assets/product/texture/5-1.jpg')
+            }
+          ]
         },
         {
           name: '廚具',
           en: 'GRAST vibration control',
           cover: require('@/assets/product/texture/6.jpg'),
-          content: require('@/assets/product/texture/6-1.jpg')
+          content: [
+            {
+              type: 'img',
+              url: require('@/assets/product/texture/6-1.jpg')
+            }
+          ]
         },
         {
           name: '衛浴',
           en: 'KALDEWEI',
           cover: require('@/assets/product/texture/7.jpg'),
-          content: require('@/assets/product/texture/7-1.jpg')
+          content: [
+            {
+              type: 'img',
+              url: require('@/assets/product/texture/7-1.jpg')
+            }
+          ]
         },
         {
           name: '鋁窗',
           en: 'Yung Shin',
           cover: require('@/assets/product/texture/8.jpg'),
-          content: require('@/assets/product/texture/8-1.jpg')
+          content: [
+            {
+              type: 'img',
+              url: require('@/assets/product/texture/8-1.jpg')
+            }
+          ]
         },
       ],
       selectedTexture: '',

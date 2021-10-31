@@ -202,6 +202,7 @@
     height: 100%;
     border-radius: size(20);
     filter: drop-shadow(0 0 size(5) rgba(0, 0, 0, 0.5));
+    overflow: hidden;
     .plan-box {
       position: absolute;
       width: 80%;
@@ -410,22 +411,22 @@ export default {
             {
               x: -215,
               y: 110,
-              img: [require('@/assets/product/plan/d1-1.jpg')]
+              img: [require('@/assets/product/plan/d1-3.jpg')]
             },
             {
               x: -140,
               y: 110,
-              img: [require('@/assets/product/plan/d1-2.jpg')]
+              img: [require('@/assets/product/plan/d1-4.jpg')]
             },
             {
               x: 100,
               y: 110,
-              img: [require('@/assets/product/plan/d1-3.jpg')]
+              img: [require('@/assets/product/plan/d1-2.jpg')]
             },
             {
               x: 170,
               y: 150,
-              img: [require('@/assets/product/plan/d1-3.jpg')]
+              img: [require('@/assets/product/plan/d1-1.jpg')]
             },
           ]
         },
@@ -460,7 +461,7 @@ export default {
             {
               x: -325,
               y: 170,
-              img: [require('@/assets/product/plan/d4-2.jpg')]
+              img: [require('@/assets/product/plan/d4-3.jpg')]
             },
 
           ]

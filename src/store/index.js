@@ -5,6 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
+        mouseEntered: false,
         navOpen: false,
         st: null,
     },
@@ -15,9 +16,21 @@ export default new Vuex.Store({
             if (payload == true) {
                 clearTimeout(state.st)
                 state.st = setTimeout(() => {
-                    state.navOpen = false
-                }, 4000)
+                    if (!state.mouseEntered) {
+                        state.navOpen = false
+                    }
+                }, 2000)
             }
+        },
+    },
+    actions: {
+        navMouseEnter({ commit, state }) {
+            commit("toggleNavbar", true)
+            state.mouseEntered = true
+        },
+        navMouseLeave({ commit, state }) {
+            commit("toggleNavbar", false)
+            state.mouseEntered = false
         },
     },
 })

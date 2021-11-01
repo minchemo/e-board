@@ -20,7 +20,7 @@
         </div>
       </template>
     </div>
-    <div class="detailPopup" v-bind:class="{ active: selectedTexture != '' }">
+    <div class="detailPopup" v-bind:class="{ active: selectedTexture != '' }" :key="selectedTexture">
       <template v-for="(content, i) in selectedTextureContent">
         <img
           class="content"
@@ -251,6 +251,14 @@ export default {
             {
               type: 'img',
               url: require('@/assets/product/texture/6-1.jpg')
+            },
+            {
+              type: 'video',
+              url: require('@/assets/product/texture/6-2.mp4')
+            },
+            {
+              type: 'img',
+              url: require('@/assets/product/texture/6-3.jpg')
             }
           ]
         },

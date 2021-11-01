@@ -126,14 +126,16 @@ export default {
       },
       tabs: [
         {
-          name: '人口',
-          slideTitle: '周邊環境＆<br>人口',
-          slideContent: `
-          新北市人口分布由板橋為首，<br/>依序為新莊、中和、三重、新<br/>
-          店、土城、永和、汐止、蘆洲、淡水、樹林，而林口則排在第12位。<br/>2020新北市成長近兩萬人約0.31%，林口增加5610人，此外同時也是過去五年人口成長率最高的市轄區(五年增加約兩萬一千人)。`,
+          name: '媒體園區',
+          slideTitle: '北台灣最大OUTLET<br/>時尚貴賓席',
+          slideContent: `「交響苑」高峰迎向三井OUTLET第一排，林口時尚朝聖第一位。三井OUTLET更於近期投入44億二期擴建計畫，導入親子數位娛樂設施、多媒體互動體適能設施、高級料理餐廳、健身中心…，與1館共同打造多達310國際時尚櫃位，造就未來北台灣最大規模購物商城，全球焦點都在您的眼下。`,
           imgs: [
-            require('@/assets/env/1-1.jpg'),
-            require('@/assets/env/1-2.jpg'),
+            require('@/assets/env/3-1.jpg'),
+            require('@/assets/env/3-2.jpg'),
+            require('@/assets/env/3-3.jpg'),
+            require('@/assets/env/3-4.jpg'),
+            require('@/assets/env/3-5.jpg'),
+            require('@/assets/env/3-6.jpg'),
           ]
         },
         {
@@ -146,15 +148,14 @@ export default {
           ]
         },
         {
-          name: '園區',
-          slideTitle: '北台灣最大OUTLET<br/>時尚貴賓席',
-          slideContent: `「交響苑」高峰迎向三井OUTLET第一排，林口時尚朝聖第一位。三井OUTLET更於近期投入44億二期擴建計畫，導入親子數位娛樂設施、多媒體互動體適能設施、高級料理餐廳、健身中心…，與1館共同打造多達310國際時尚櫃位，造就未來北台灣最大規模購物商城，全球焦點都在您的眼下。`,
+          name: '人口',
+          slideTitle: '周邊環境＆<br>人口',
+          slideContent: `
+          新北市人口分布由板橋為首，<br/>依序為新莊、中和、三重、新<br/>
+          店、土城、永和、汐止、蘆洲、淡水、樹林，而林口則排在第12位。<br/>2020新北市成長近兩萬人約0.31%，林口增加5610人，此外同時也是過去五年人口成長率最高的市轄區(五年增加約兩萬一千人)。`,
           imgs: [
-            require('@/assets/env/3-1.jpg'),
-            require('@/assets/env/3-2.jpg'),
-            require('@/assets/env/3-3.jpg'),
-            require('@/assets/env/3-4.jpg'),
-            require('@/assets/env/3-5.jpg'),
+            require('@/assets/env/1-1.jpg'),
+            require('@/assets/env/1-2.jpg'),
           ]
         },
         {

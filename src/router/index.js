@@ -26,8 +26,8 @@ const routes = [{
         name: 'Env',
         component: Env,
         children: [{
-                title: "人口",
-                name: "人口",
+                title: "媒體園區",
+                name: "媒體園區",
                 path: '/env/1',
                 component: Env
             },
@@ -36,10 +36,9 @@ const routes = [{
                 name: "交通",
                 path: '/env/2',
                 component: Env
-            },
-            {
-                title: "園區",
-                name: "園區",
+            }, {
+                title: "人口",
+                name: "人口",
                 path: '/env/3',
                 component: Env
             },
@@ -65,14 +64,14 @@ const routes = [{
         name: 'Team',
         component: Team,
         children: [{
-                title: "長虹",
-                name: "長虹",
+                title: "長虹建設",
+                name: "長虹建設",
                 path: '/team/1',
                 component: Team
             },
             {
-                title: "森聯",
-                name: "森聯",
+                title: "森聯建設",
+                name: "森聯建設",
                 path: '/team/2',
                 component: Team
             },
@@ -83,8 +82,8 @@ const routes = [{
                 component: Team
             },
             {
-                title: "空間展演",
-                name: "空間展演",
+                title: "樣品屋",
+                name: "樣品屋",
                 path: '/team/4',
                 component: Team,
             }
@@ -104,14 +103,14 @@ const routes = [{
                 component: Product
             },
             {
-                title: "傢配圖",
-                name: "傢配圖",
+                title: "平面圖",
+                name: "平面圖",
                 path: '/product/2',
                 component: Product
             },
             {
-                title: "建材",
-                name: "建材",
+                title: "建材配備",
+                name: "建材配備",
                 path: '/product/3',
                 component: Product
             },

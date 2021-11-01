@@ -1,9 +1,9 @@
 <template>
   <div class="team">
-    <S1 v-if="$route.name == '長虹'" />
-    <S2 v-else-if="$route.name == '森聯'" />
+    <S1 v-if="$route.name == '長虹建設'" />
+    <S2 v-else-if="$route.name == '森聯建設'" />
     <S3 v-else-if="$route.name == '建築職人'" />
-    <S4 v-else-if="$route.name == '空間展演'" />
+    <S4 v-else-if="$route.name == '樣品屋'" />
     <Nav :theme="'team-theme'" />
   </div>
 </template>

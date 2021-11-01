@@ -1,8 +1,8 @@
 <template>
   <div class="product">
     <ProductInfo v-if="$route.name == '基本資料'" />
-    <ProductPlan v-else-if="$route.name == '傢配圖'" />
-    <ProductTexture v-else-if="$route.name == '建材'" />
+    <ProductPlan v-else-if="$route.name == '平面圖'" />
+    <ProductTexture v-else-if="$route.name == '建材配備'" />
     <div class="bg"></div>
     <Nav :theme="'product-theme'" />
   </div>

@@ -4,6 +4,8 @@
       class="navigation"
       ref="navigation"
       v-bind:class="{ active: $store.state.navOpen, [saveTheme]: saveTheme }"
+      @mouseenter="$store.dispatch('navMouseEnter')"
+      @mouseleave="$store.dispatch('navMouseLeave')"
     >
       <div class="nav" ref="nav">
         <router-link
@@ -41,6 +43,11 @@
     >
       <img src="@/assets/layout/nav-hide.svg" alt="" srcset="" />
     </div>
+    <div
+      class="hover-detect-area"
+      @mouseenter="$store.dispatch('navMouseEnter')"
+      @mouseleave="$store.dispatch('navMouseLeave')"
+    ></div>
   </div>
 </template>
 
@@ -305,6 +312,14 @@
   &:hover {
     filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5));
   }
+}
+.hover-detect-area {
+  position: fixed;
+  width: 100%;
+  height: 20%;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
 }
 </style>
 

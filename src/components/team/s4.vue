@@ -20,7 +20,7 @@
     >
       看更多
     </div>
-    <div class="seemore-detail" v-bind:class="{ active: detailOpened }">
+    <div class="seemore-detail" v-bind:class="{ active: detailOpened }" :key="activaTab.name">
       <div class="detail-content">
         <div class="title">{{ activaTab.title }}</div>
         <div class="designer">{{ activaTab.designer }}</div>

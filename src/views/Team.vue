@@ -3,7 +3,7 @@
     <S1 v-if="$route.name == '長虹建設'" />
     <S2 v-else-if="$route.name == '森聯建設'" />
     <S3 v-else-if="$route.name == '建築職人'" />
-    <S4 v-else-if="$route.name == '樣品屋'" />
+    <S4 v-else-if="$route.name == '實品屋'" />
     <Nav :theme="'team-theme'" />
   </div>
 </template>

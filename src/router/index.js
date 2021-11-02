@@ -82,8 +82,8 @@ const routes = [{
                 component: Team
             },
             {
-                title: "樣品屋",
-                name: "樣品屋",
+                title: "實品屋",
+                name: "實品屋",
                 path: '/team/4',
                 component: Team,
             }

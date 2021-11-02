@@ -130,12 +130,12 @@ export default {
           slideTitle: '北台灣最大OUTLET<br/>時尚貴賓席',
           slideContent: `「交響苑」高峰迎向三井OUTLET第一排，林口時尚朝聖第一位。三井OUTLET更於近期投入44億二期擴建計畫，導入親子數位娛樂設施、多媒體互動體適能設施、高級料理餐廳、健身中心…，與1館共同打造多達310國際時尚櫃位，造就未來北台灣最大規模購物商城，全球焦點都在您的眼下。`,
           imgs: [
+            require('@/assets/env/3-6.jpg'),
             require('@/assets/env/3-1.jpg'),
             require('@/assets/env/3-2.jpg'),
             require('@/assets/env/3-3.jpg'),
             require('@/assets/env/3-4.jpg'),
             require('@/assets/env/3-5.jpg'),
-            require('@/assets/env/3-6.jpg'),
           ]
         },
         {

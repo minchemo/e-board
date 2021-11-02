@@ -411,22 +411,22 @@ export default {
             {
               x: -215,
               y: 110,
-              img: [require('@/assets/product/plan/d1-3.jpg')]
+              img: [require('@/assets/product/plan/d1-2.jpg')]
             },
             {
               x: -140,
               y: 110,
-              img: [require('@/assets/product/plan/d1-4.jpg')]
+              img: [require('@/assets/product/plan/d1-1.jpg')]
             },
             {
               x: 100,
               y: 110,
-              img: [require('@/assets/product/plan/d1-2.jpg')]
+              img: [require('@/assets/product/plan/d1-3.jpg')]
             },
             {
               x: 170,
               y: 150,
-              img: [require('@/assets/product/plan/d1-1.jpg')]
+              img: [require('@/assets/product/plan/d1-4.jpg')]
             },
           ]
         },

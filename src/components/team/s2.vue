@@ -119,14 +119,14 @@
 
   .popup {
     position: fixed;
-    width: 60vw;
+    width: auto;
     height: 38.49vw;
     z-index: 50;
     background: #fff;
     top: 50%;
     left: 50%;
     transform: translate(300%, -50%);
-    border-radius: size(20);
+    border-radius: size(30);
     transition: all 0.3s;
     display: flex;
     align-items: center;
@@ -134,13 +134,13 @@
     overflow: hidden;
     .close {
       position: absolute;
-      right: size(10);
+      right: size(20);
       top: size(10);
       cursor: pointer;
       width: size(50);
     }
     img {
-      width: 100%;
+      height: 100%;
     }
 
     &.active {
@@ -160,17 +160,17 @@ export default {
         {
           name: '百水硯',
           cover: require('@/assets/team/s2/1.jpg'),
-          big: require('@/assets/team/s2/2-1.jpg'),
+          big: require('@/assets/team/s2/2-1.png'),
         },
         {
           name: '森JIA',
           cover: require('@/assets/team/s2/2.jpg'),
-          big: require('@/assets/team/s2/2-2.jpg'),
+          big: require('@/assets/team/s2/2-2.png'),
         },
         {
           name: '森聯41',
           cover: require('@/assets/team/s2/3.jpg'),
-          big: require('@/assets/team/s2/2-3.jpg'),
+          big: require('@/assets/team/s2/2-3.png'),
         },
       ],
     }

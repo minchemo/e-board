@@ -119,14 +119,14 @@
 
   .popup {
     position: fixed;
-    width: 60vw;
+    width: auto;
     height: 38.49vw;
     z-index: 50;
     background: #fff;
     top: 50%;
     left: 50%;
     transform: translate(300%, -50%);
-    border-radius: size(20);
+    border-radius: size(25);
     transition: all 0.3s;
     display: flex;
     align-items: center;
@@ -134,13 +134,13 @@
     overflow: hidden;
     .close {
       position: absolute;
-      right: size(10);
+      right: size(20);
       top: size(10);
       cursor: pointer;
       width: size(50);
     }
     img {
-      width: 100%;
+      height: 100%;
     }
 
     &.active {
@@ -160,42 +160,42 @@ export default {
         {
           name: '帝璽',
           cover: require('@/assets/team/s1/1.jpg'),
-          big: require('@/assets/team/s1/1-1.jpg'),
+          big: require('@/assets/team/s1/1-1.png'),
         },
         {
           name: '長虹虹頂',
           cover: require('@/assets/team/s1/2.jpg'),
-          big: require('@/assets/team/s1/1-2.jpg'),
+          big: require('@/assets/team/s1/1-2.png'),
         },
         {
           name: '世紀長虹',
           cover: require('@/assets/team/s1/3.jpg'),
-          big: require('@/assets/team/s1/1-3.jpg'),
+          big: require('@/assets/team/s1/1-3.png'),
         },
         {
           name: '忠孝詠吉',
           cover: require('@/assets/team/s1/4.jpg'),
-          big: require('@/assets/team/s1/1-4.jpg'),
+          big: require('@/assets/team/s1/1-4.png'),
         },
         {
           name: '長虹天蔚',
           cover: require('@/assets/team/s1/5.jpg'),
-          big: require('@/assets/team/s1/1-5.jpg'),
+          big: require('@/assets/team/s1/1-5.png'),
         },
         {
           name: '長虹天際',
           cover: require('@/assets/team/s1/6.jpg'),
-          big: require('@/assets/team/s1/1-6.jpg'),
+          big: require('@/assets/team/s1/1-6.png'),
         },
         {
           name: '明日博',
           cover: require('@/assets/team/s1/7.jpg'),
-          big: require('@/assets/team/s1/1-7.jpg'),
+          big: require('@/assets/team/s1/1-7.png'),
         },
         {
           name: '長虹天薈',
           cover: require('@/assets/team/s1/8.jpg'),
-          big: require('@/assets/team/s1/1-8.jpg'),
+          big: require('@/assets/team/s1/1-8.png'),
         },
       ],
     }

@@ -120,13 +120,13 @@
   .popup {
     position: fixed;
     width: auto;
-    height: 38.49vw;
+    height: 90%;
     z-index: 50;
     background: #fff;
     top: 50%;
     left: 50%;
     transform: translate(300%, -50%);
-    border-radius: size(30);
+    border-radius: size(35);
     transition: all 0.3s;
     display: flex;
     align-items: center;
@@ -134,10 +134,13 @@
     overflow: hidden;
     .close {
       position: absolute;
-      right: size(20);
+      right: size(10);
       top: size(10);
       cursor: pointer;
       width: size(50);
+      img {
+        width: 100%;
+      }
     }
     img {
       height: 100%;

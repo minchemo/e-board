@@ -343,7 +343,9 @@
     .swiper-container {
       height: 100%;
       .swiper-slide {
-        background-size: cover;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
       }
     }
   }
@@ -351,244 +353,306 @@
 </style>
 
 <script>
-import interact from 'interactjs'
-import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
-import 'swiper/swiper-bundle.css'
+import interact from "interactjs";
+import { Swiper, SwiperSlide } from "vue-awesome-swiper";
+import "swiper/swiper-bundle.css";
 
-import Swiper2, { Navigation, Pagination, Autoplay } from 'swiper';
-Swiper2.use([Navigation, Pagination, Autoplay])
+import Swiper2, { Navigation, Pagination, Autoplay } from "swiper";
+Swiper2.use([Navigation, Pagination, Autoplay]);
 
 export default {
   data() {
     return {
       swiperOptions: {
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
         pagination: {
-          el: '.swiper-pagination'
+          el: ".swiper-pagination",
         },
       },
       plans: [
         {
-          name: 'b4 f',
-          plan: [
-            require('@/assets/product/plan/b4f.svg')
-          ]
+          name: "b4 f",
+          plan: [require("@/assets/product/plan/b4f.svg")],
         },
         {
-          name: 'b3 f',
-          plan: [
-            require('@/assets/product/plan/b3f.svg')
-          ]
+          name: "b3 f",
+          plan: [require("@/assets/product/plan/b3f.svg")],
         },
         {
-          name: 'b2 f',
-          plan: [
-            require('@/assets/product/plan/b2f.svg')
-          ]
+          name: "b2 f",
+          plan: [require("@/assets/product/plan/b2f.svg")],
         },
         {
-          name: 'b1 f',
-          plan: [
-            require('@/assets/product/plan/b1f.svg')
-          ],
+          name: "b1 f",
+          plan: [require("@/assets/product/plan/b1f.svg")],
           detail: [
             {
               x: -115,
               y: 40,
-              img: [require('@/assets/product/plan/db1-1.jpg')]
+              img: [require("@/assets/product/plan/db1-1.jpg")],
             },
-          ]
+          ],
         },
         {
-          name: '1f',
-          plan: [
-            require('@/assets/product/plan/1f.svg')
-          ],
+          name: "1f",
+          plan: [require("@/assets/product/plan/1f.svg")],
           detail: [
             {
               x: -215,
               y: 110,
-              img: [require('@/assets/product/plan/d1-2.jpg')]
+              img: [require("@/assets/product/plan/d1-2.jpg")],
             },
             {
               x: -140,
               y: 110,
-              img: [require('@/assets/product/plan/d1-1.jpg')]
+              img: [require("@/assets/product/plan/d1-1.jpg")],
             },
             {
               x: 100,
               y: 110,
-              img: [require('@/assets/product/plan/d1-3.jpg')]
+              img: [require("@/assets/product/plan/d1-3.jpg")],
             },
             {
               x: 170,
               y: 150,
-              img: [require('@/assets/product/plan/d1-4.jpg')]
+              img: [require("@/assets/product/plan/d1-4.jpg")],
             },
-          ]
-        },
-        {
-          name: '2f',
-          plan: [
-            require('@/assets/product/plan/2f.svg')
-          ]
-        },
-        {
-          name: '3f',
-          plan: [
-            require('@/assets/product/plan/3f.svg')
-          ]
-        },
-        {
-          name: '4-10f',
-          plan: [
-            require('@/assets/product/plan/4-10f.svg')
           ],
+        },
+        {
+          name: "2f",
+          plan: [require("@/assets/product/plan/2f.svg")],
+        },
+        {
+          name: "3f",
+          plan: [require("@/assets/product/plan/3f.svg")],
+        },
+        {
+          name: "4-10f",
+          plan: [require("@/assets/product/plan/4-10f.svg")],
           detail: [
             {
               x: -150,
               y: 170,
-              img: [require('@/assets/product/plan/d4-1.jpg')]
+              img: [require("@/assets/product/plan/d4-1.jpg")],
             },
             {
               x: -235,
               y: 170,
-              img: [require('@/assets/product/plan/d4-2.jpg')]
+              img: [require("@/assets/product/plan/d4-2.jpg")],
             },
             {
               x: -325,
               y: 170,
-              img: [require('@/assets/product/plan/d4-3.jpg')]
+              img: [require("@/assets/product/plan/d4-3.jpg")],
             },
-
-          ]
-        },
-        {
-          name: '11f',
-          plan: [
-            require('@/assets/product/plan/11f.svg')
-          ]
-        },
-        {
-          name: '12-22f',
-          plan: [
-            require('@/assets/product/plan/12-22f.svg')
+            {
+              //a3
+              x: -150,
+              y: -160,
+              img: [require("@/assets/product/plan/家配圖A3 4-10F.jpg")],
+            },
+            {
+              //a2
+              x: -235,
+              y: -160,
+              img: [require("@/assets/product/plan/家配圖A2 4-10F.jpg")],
+            },
+            {
+              //a1
+              x: -325,
+              y: -160,
+              img: [require("@/assets/product/plan/家配圖A1 4-10F.jpg")],
+            },
+            {
+              //b3
+              x: 150,
+              y: -160,
+              img: [require("@/assets/product/plan/家配圖B3 4-10F.jpg")],
+            },
+            {
+              //b2
+              x: 240,
+              y: -160,
+              img: [require("@/assets/product/plan/家配圖B2 4-10F.jpg")],
+            },
+            {
+              //b1
+              x: 330,
+              y: -160,
+              img: [require("@/assets/product/plan/家配圖B1 4-10F.jpg")],
+            },
+            {
+              //b3
+              x: 150,
+              y: 170,
+              img: [require("@/assets/product/plan/家配圖B5 4-10F.jpg")],
+            },
+            {
+              //b2
+              x: 240,
+              y: 170,
+              img: [require("@/assets/product/plan/家配圖B6 4-10F.jpg")],
+            },
+            {
+              //b1
+              x: 330,
+              y: 170,
+              img: [require("@/assets/product/plan/家配圖B7 4-10F.jpg")],
+            },
           ],
+        },
+        {
+          name: "11f",
+          plan: [require("@/assets/product/plan/11f.svg")],
+        },
+        {
+          name: "12-22f",
+          plan: [require("@/assets/product/plan/12-22f.svg")],
           detail: [
             {
               x: -190,
               y: -100,
-              img: [require('@/assets/product/plan/d12-1.jpg')]
+              img: [require("@/assets/product/plan/d12-1.jpg")],
             },
             {
               x: -260,
               y: -100,
-              img: [require('@/assets/product/plan/d12-2.jpg')]
+              img: [require("@/assets/product/plan/d12-2.jpg")],
             },
-          ]
-        },
-        {
-          name: '23f',
-          plan: [
-            require('@/assets/product/plan/23f.svg')
-          ]
-        },
-        {
-          name: '24f',
-          plan: [
-            require('@/assets/product/plan/24f.svg')
-          ]
-        },
-        {
-          name: 'r1f',
-          plan: [
-            require('@/assets/product/plan/r1f.svg')
+            {
+              //a3
+              x: -190,
+              y: 90,
+              img: [require("@/assets/product/plan/家配圖A3 12-22F.jpg")],
+            },
+            {
+              //a5
+              x: -260,
+              y: 90,
+              img: [require("@/assets/product/plan/家配圖A5 12-22F.jpg")],
+            },
+            {
+              //b2
+              x: 190,
+              y: -100,
+              img: [require("@/assets/product/plan/家配圖B2 12-22F.jpg")],
+            },
+            {
+              //b1
+              x: 280,
+              y: -100,
+              img: [require("@/assets/product/plan/家配圖B1 12-22F.jpg")],
+            },
+            {
+              //b3
+              x: 190,
+              y: 90,
+              img: [require("@/assets/product/plan/家配圖B3 12-22F.jpg")],
+            },
+            {
+              //b5
+              x: 280,
+              y: 90,
+              img: [require("@/assets/product/plan/家配圖B5 12-22F.jpg")],
+            },
           ],
+        },
+        {
+          name: "23f",
+          plan: [require("@/assets/product/plan/23f.svg")],
+        },
+        {
+          name: "24f",
+          plan: [require("@/assets/product/plan/24f.svg")],
+        },
+        {
+          name: "r1f",
+          plan: [require("@/assets/product/plan/r1f.svg")],
           detail: [
             {
               x: -195,
               y: 40,
-              img: [require('@/assets/product/plan/dr1-1.jpg')]
+              img: [require("@/assets/product/plan/dr1-1.jpg")],
             },
-          ]
+          ],
         },
         {
-          name: 'r2f',
-          plan: [
-            require('@/assets/product/plan/r2f.svg')
-          ],
+          name: "r2f",
+          plan: [require("@/assets/product/plan/r2f.svg")],
           detail: [
             {
               x: -270,
               y: -15,
-              img: [require('@/assets/product/plan/dr2-1.jpg')]
+              img: [require("@/assets/product/plan/dr2-1.jpg")],
             },
-          ]
+          ],
         },
         {
-          name: 'r3f',
-          plan: [
-            require('@/assets/product/plan/r3f.svg')
-          ],
+          name: "r3f",
+          plan: [require("@/assets/product/plan/r3f.svg")],
           detail: [
             {
               x: -260,
               y: 100,
-              img: [require('@/assets/product/plan/dr3-1.jpg'), require('@/assets/product/plan/dr3-2.jpg'), require('@/assets/product/plan/dr3-3.jpg')]
+              img: [
+                require("@/assets/product/plan/dr3-1.jpg"),
+                require("@/assets/product/plan/dr3-2.jpg"),
+                require("@/assets/product/plan/dr3-3.jpg"),
+              ],
             },
-          ]
-        }
+          ],
+        },
       ],
-      selectedFloor: '1f',
+      selectedFloor: "12-22f",
       scaleLevel: 1.0,
       dragPos: { x: 0, y: 0 },
-      activeDetailImg: []
-    }
+      activeDetailImg: [],
+    };
   },
   components: {
     Swiper,
-    SwiperSlide
+    SwiperSlide,
   },
   computed: {
     activeFloor() {
-      return this.plans.find(item => item.name == this.selectedFloor)
-    }
+      return this.plans.find((item) => item.name == this.selectedFloor);
+    },
   },
   watch: {
     selectedFloor(newVal, oldVal) {
-      this.activeFloor = this.plans.find(item => item.name == newVal)
+      this.activeFloor = this.plans.find((item) => item.name == newVal);
       this.scaleLevel = 1.0;
-      this.dragPos = { x: 0, y: 0 }
-    }
+      this.dragPos = { x: 0, y: 0 };
+    },
   },
   methods: {
     zoomIn() {
       if (this.scaleLevel <= 6) {
-        this.scaleLevel += 0.5
+        this.scaleLevel += 0.5;
       }
     },
     zoomOut() {
       if (this.scaleLevel >= 1) {
-        this.scaleLevel -= 0.5
+        this.scaleLevel -= 0.5;
       }
-    }
+    },
   },
   created() {
     this.plans = this.plans.reverse();
 
     const self = this;
-    interact('.draggable').draggable({
+    interact(".draggable").draggable({
       listeners: {
         move(event) {
-          self.dragPos.x += event.dx
-          self.dragPos.y += event.dy
+          self.dragPos.x += event.dx;
+          self.dragPos.y += event.dy;
         },
       },
-    })
-
+    });
   },
-}
+};
 </script>

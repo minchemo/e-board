@@ -316,7 +316,7 @@
 .hover-detect-area {
   position: fixed;
   width: 100%;
-  height: 20%;
+  height: size(100);
   bottom: 0;
   left: 0;
   z-index: 1;

@@ -573,42 +573,42 @@ export default {
           name: "r1f",
           plan: [require("@/assets/product/plan/r1f.svg")],
           detail: [
-            {
-              x: -195,
-              y: 40,
-              img: [require("@/assets/product/plan/dr1-1.jpg")],
-            },
+            // {
+            //   x: -195,
+            //   y: 40,
+            //   img: [require("@/assets/product/plan/dr1-1.jpg")],
+            // },
           ],
         },
         {
           name: "r2f",
           plan: [require("@/assets/product/plan/r2f.svg")],
           detail: [
-            {
-              x: -270,
-              y: -15,
-              img: [require("@/assets/product/plan/dr2-1.jpg")],
-            },
+            // {
+            //   x: -270,
+            //   y: -15,
+            //   img: [require("@/assets/product/plan/dr2-1.jpg")],
+            // },
           ],
         },
         {
           name: "r3f",
           plan: [require("@/assets/product/plan/r3f.svg")],
           detail: [
-            {
-              x: -260,
-              y: 100,
-              img: [
-                require("@/assets/product/plan/dr3-1.jpg"),
-                require("@/assets/product/plan/dr3-2.jpg"),
-                require("@/assets/product/plan/dr3-3.jpg"),
-              ],
-            },
+            // {
+            //   x: -260,
+            //   y: 100,
+            //   img: [
+            //     require("@/assets/product/plan/dr3-1.jpg"),
+            //     require("@/assets/product/plan/dr3-2.jpg"),
+            //     require("@/assets/product/plan/dr3-3.jpg"),
+            //   ],
+            // },
           ],
         },
       ],
       selectedFloor: "12-22f",
-      scaleLevel: 1.0,
+      scaleLevel: 0.5,
       dragPos: { x: 0, y: 0 },
       activeDetailImg: [],
     };
@@ -625,7 +625,7 @@ export default {
   watch: {
     selectedFloor(newVal, oldVal) {
       this.activeFloor = this.plans.find((item) => item.name == newVal);
-      this.scaleLevel = 1.0;
+      this.scaleLevel = 0.5;
       this.dragPos = { x: 0, y: 0 };
     },
   },

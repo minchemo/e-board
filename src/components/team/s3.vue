@@ -53,6 +53,7 @@
   overflow: hidden;
   width: 100%;
   display: flex;
+  flex-direction: row-reverse;
 
   .left {
     background-image: url("../../assets/team/s3/left.jpg");

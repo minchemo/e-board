@@ -1,9 +1,13 @@
 <template>
   <div class="env">
     <div class="swiper-box" :key="activeTabs.name">
-      <div class="info" >
+      <div class="info">
         <h1 data-aos="fade-right" v-html="activeTabs.slideTitle"></h1>
-        <p data-aos="fade-right" data-aos-delay="200" v-html="activeTabs.slideContent"></p>
+        <p
+          data-aos="fade-right"
+          data-aos-delay="200"
+          v-html="activeTabs.slideContent"
+        ></p>
         <img class="mask" src="@/assets/env/mask.png" alt="" srcset="" />
       </div>
       <swiper :options="swiperOptions">
@@ -12,6 +16,44 @@
           :key="i"
           v-bind:style="{ backgroundImage: `url('${slide}')` }"
         >
+          <template v-if="activeTabs.name == '媒體園區' && i == 0">
+            <svg
+              class="s3-svg"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 4000 2250"
+            >
+              <g id="圖層_6" data-name="圖層 6">
+                <rect class="cls-1" width="4000" height="2250" />
+              </g>
+              <g id="圖層_2" data-name="圖層 2">
+                <polyline
+                  class="cls-2"
+                  v-bind:class="{ active: activeS3 == 1 }"
+                  @mouseenter="activeS3 = 1"
+                  @mouseleave="activeS3 = 0"
+                  points="2000 1617 1938.67 1510.33 1816 1510.33 1823.33 1456.33 1652.67 1447 1508 1672.33 1950 1811.67"
+                />
+              </g>
+              <g id="圖層_3" data-name="圖層 3">
+                <polygon
+                  class="cls-2"
+                  v-bind:class="{ active: activeS3 == 2 }"
+                  @mouseenter="activeS3 = 2"
+                  @mouseleave="activeS3 = 0"
+                  points="1970.67 1427.67 2524.67 1454.33 2473.33 1665.67 2247.67 1653.67 2057.33 1625 2000 1617 1938.67 1510.33 1976.67 1511.67 1970.67 1427.67"
+                />
+              </g>
+              <g id="圖層_4" data-name="圖層 4">
+                <path
+                  class="cls-2"
+                  v-bind:class="{ active: activeS3 == 3 }"
+                  @mouseenter="activeS3 = 3"
+                  @mouseleave="activeS3 = 0"
+                  d="M2000,1617s210.67,32.67,214,32.67,262.67,16,262.67,16l58.66,3.33,241.34-16.67,58.66,203.34-453.33,6-260-20-172-30Z"
+                />
+              </g>
+            </svg>
+          </template>
         </swiper-slide>
         <div class="swiper-button-prev" slot="button-prev">
           <i class="el-icon-caret-left"></i>
@@ -26,6 +68,19 @@
 </template>
 
 <style lang="scss">
+.s3-svg {
+  position: absolute;
+  .cls-1 {
+    fill: transparent;
+  }
+  .cls-2 {
+    fill: rgba(255, 255, 255, 0.3);
+
+    &.active {
+      fill: rgba(255, 251, 0, 0.5);
+    }
+  }
+}
 .env {
   .swiper-box {
     .swiper-button-prev,
@@ -43,6 +98,14 @@
     .swiper-button-prev {
       left: size(60);
     }
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .s3-svg {
+    bottom: 1%;
+    width: 132%;
+    left: -16%;
   }
 }
 </style>
@@ -95,6 +158,7 @@
         width: 100%;
         height: 100vh;
         background-size: cover;
+        background-position: top center;
       }
     }
   }
@@ -118,6 +182,7 @@ export default {
   },
   data() {
     return {
+      activeS3: 0,
       swiperOptions: {
         navigation: {
           nextEl: '.swiper-button-next',

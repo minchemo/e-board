@@ -8,7 +8,13 @@
           data-aos-delay="200"
           v-html="activeTabs.slideContent"
         ></p>
-        <img class="mask" src="@/assets/env/mask.png" alt="" srcset="" />
+        <img
+          v-if="activeTabs.slideContent != ''"
+          class="mask"
+          src="@/assets/env/mask.png"
+          alt=""
+          srcset=""
+        />
       </div>
       <swiper :options="swiperOptions">
         <swiper-slide
@@ -196,52 +202,60 @@ export default {
           slideContent: `「交響苑」高峰迎向三井OUTLET第一排，林口時尚朝聖第一位。三井OUTLET更於近期投入44億二期擴建計畫，導入親子數位娛樂設施、多媒體互動體適能設施、高級料理餐廳、健身中心…，與1館共同打造多達310國際時尚櫃位，造就未來北台灣最大規模購物商城，全球焦點都在您的眼下。`,
           imgs: [
             require('@/assets/env/3-6.jpg'),
-            require('@/assets/env/3-1.jpg'),
-            require('@/assets/env/3-2.jpg'),
-            require('@/assets/env/3-3.jpg'),
+            require('@/assets/env/slider_2.jpg'),
+            require('@/assets/env/slider_3.jpg'),
+            require('@/assets/env/slider_4.jpg'),
             require('@/assets/env/3-4.jpg'),
             require('@/assets/env/3-5.jpg'),
           ]
         },
         {
-          name: '交通',
-          slideTitle: '台北衛星城<br/>國門第一站',
-          slideContent: `坐首席、看世界，放眼全球立即起飛。「交響苑」出發，林口交流道約5分鐘直上國道；機捷A9站約600米步行轉眼到，三站直達機場靠近精彩世界。鄰近轉運站500米出門八方通，UBIKE租車站200米林口隨時任遙遊。。`,
+          name: '生活機能',
+          slideTitle: '',
+          slideContent: ``,
           imgs: [
-            require('@/assets/env/2-1.jpg'),
-            require('@/assets/env/2-2.jpg'),
+            require('@/assets/env/生活機能.jpg'),
           ]
         },
-        {
-          name: '人口',
-          slideTitle: '周邊環境＆<br>人口',
-          slideContent: `
-          新北市人口分布由板橋為首，<br/>依序為新莊、中和、三重、新<br/>
-          店、土城、永和、汐止、蘆洲、淡水、樹林，而林口則排在第12位。<br/>2020新北市成長近兩萬人約0.31%，林口增加5610人，此外同時也是過去五年人口成長率最高的市轄區(五年增加約兩萬一千人)。`,
-          imgs: [
-            require('@/assets/env/1-1.jpg'),
-            require('@/assets/env/1-2.jpg'),
-          ]
-        },
-        {
-          name: '學校',
-          slideTitle: '全球化培育<br/>一路康莊道',
-          slideContent: `孩子的錦繡前程，從「交響苑」啟程，AAIA 新北美國學校、康橋雙語學校、馬禮遜美國學校、新林雙語實驗小學，合力打造林口國際菁英學區，台北輕移民，讓孩子一路輕鬆造就非凡未來。`,
-          imgs: [
-            require('@/assets/env/4-1.jpg'),
-            require('@/assets/env/4-2.jpg'),
-          ]
-        },
-        {
-          name: '景點',
-          slideTitle: '壯麗大綠地<br/>公園氧城市',
-          slideContent: `紐約中央公園、台北大安森林公園,因廣大公園綠地身價非凡；林口坐擁31座大公園及11座高爾夫球場，擁60％以上綠覆率，未來價值無可限量。「交響苑」擁豪大綠景、鄰近林口扶輪公園，頂端人士嚴選城市氧境。`,
-          imgs: [
-            require('@/assets/env/5-1.jpg'),
-            require('@/assets/env/5-2.jpg'),
-            require('@/assets/env/5-3.jpg'),
-          ]
-        }
+        // {
+        //   name: '交通',
+        //   slideTitle: '台北衛星城<br/>國門第一站',
+        //   slideContent: `坐首席、看世界，放眼全球立即起飛。「交響苑」出發，林口交流道約5分鐘直上國道；機捷A9站約600米步行轉眼到，三站直達機場靠近精彩世界。鄰近轉運站500米出門八方通，UBIKE租車站200米林口隨時任遙遊。。`,
+        //   imgs: [
+        //     require('@/assets/env/2-1.jpg'),
+        //     require('@/assets/env/2-2.jpg'),
+        //   ]
+        // },
+        // {
+        //   name: '人口',
+        //   slideTitle: '周邊環境＆<br>人口',
+        //   slideContent: `
+        //   新北市人口分布由板橋為首，<br/>依序為新莊、中和、三重、新<br/>
+        //   店、土城、永和、汐止、蘆洲、淡水、樹林，而林口則排在第12位。<br/>2020新北市成長近兩萬人約0.31%，林口增加5610人，此外同時也是過去五年人口成長率最高的市轄區(五年增加約兩萬一千人)。`,
+        //   imgs: [
+        //     require('@/assets/env/1-1.jpg'),
+        //     require('@/assets/env/1-2.jpg'),
+        //   ]
+        // },
+        // {
+        //   name: '學校',
+        //   slideTitle: '全球化培育<br/>一路康莊道',
+        //   slideContent: `孩子的錦繡前程，從「交響苑」啟程，AAIA 新北美國學校、康橋雙語學校、馬禮遜美國學校、新林雙語實驗小學，合力打造林口國際菁英學區，台北輕移民，讓孩子一路輕鬆造就非凡未來。`,
+        //   imgs: [
+        //     require('@/assets/env/4-1.jpg'),
+        //     require('@/assets/env/4-2.jpg'),
+        //   ]
+        // },
+        // {
+        //   name: '景點',
+        //   slideTitle: '壯麗大綠地<br/>公園氧城市',
+        //   slideContent: `紐約中央公園、台北大安森林公園,因廣大公園綠地身價非凡；林口坐擁31座大公園及11座高爾夫球場，擁60％以上綠覆率，未來價值無可限量。「交響苑」擁豪大綠景、鄰近林口扶輪公園，頂端人士嚴選城市氧境。`,
+        //   imgs: [
+        //     require('@/assets/env/5-1.jpg'),
+        //     require('@/assets/env/5-2.jpg'),
+        //     require('@/assets/env/5-3.jpg'),
+        //   ]
+        // }
       ]
     }
   },

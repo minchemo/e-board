@@ -290,8 +290,8 @@
     }
     .warning {
       position: absolute;
-      width: size(54);
-      right: size(70);
+      width: size(10);
+      right: size(90);
       top: size(70);
     }
   }

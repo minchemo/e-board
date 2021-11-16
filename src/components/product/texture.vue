@@ -20,7 +20,11 @@
         </div>
       </template>
     </div>
-    <div class="detailPopup" v-bind:class="{ active: selectedTexture != '' }" :key="selectedTexture">
+    <div
+      class="detailPopup"
+      v-bind:class="{ active: selectedTexture != '' }"
+      :key="selectedTexture"
+    >
       <template v-for="(content, i) in selectedTextureContent">
         <img
           class="content"
@@ -248,10 +252,6 @@ export default {
           en: 'GRAST vibration control',
           cover: require('@/assets/product/texture/6.jpg'),
           content: [
-            {
-              type: 'img',
-              url: require('@/assets/product/texture/6-1.jpg')
-            },
             {
               type: 'video',
               url: require('@/assets/product/texture/6-2.mp4')

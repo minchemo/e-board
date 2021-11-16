@@ -105,7 +105,6 @@
                 </g>
 
                 <g class="group" v-bind:class="{ active: activeS3 == 2 }">
-                  <circle class="cls-4" cx="2073.02" cy="670.48" r="8.14" />
                   <path
                     class="cls-4"
                     d="M2084.3,633v2.47h-24.44V633ZM2083,614.11v2.36h-21.53v-2.36Zm-1.62,9v2.35h-18.32v-2.35Z"
@@ -209,7 +208,6 @@
                 </g>
 
                 <g class="group" v-bind:class="{ active: activeS3 == 3 }">
-                  <circle class="cls-4" cx="2169.81" cy="670.48" r="8.14" />
                   <path
                     class="cls-4"
                     d="M2135.36,617c0-.16,0-.3,0-.46v-3.31a12.55,12.55,0,0,0-.14-1.52l2,.17c.34,0,.52.1.52.24s-.16.42-.48.62v3.8c0,.16,0,.32,0,.46h7.59v1.74h-7.55a14.33,14.33,0,0,0,3,5.51,13.26,13.26,0,0,0,5.29,3.72l-1.66,1.9a14.88,14.88,0,0,1-5.13-4.4,16.7,16.7,0,0,1-2.14-4c-.16.52-.32,1-.5,1.43a11.39,11.39,0,0,1-3.4,4.16,22.82,22.82,0,0,1-4.2,2.77l-1.65-1.5a22.81,22.81,0,0,0,3.94-2.28,10.4,10.4,0,0,0,3.17-3.33,11.7,11.7,0,0,0,1.25-4h-7.65V617Z"
@@ -458,7 +456,6 @@
                     points="3082.26 1513.47 3080.96 1501.48 3080.96 789.6 3082.26 789.6 3082.26 1513.47"
                   />
                   <circle class="cls-4" cx="3081.53" cy="1515.76" r="10.19" />
-                  <circle class="cls-4" cx="2937.4" cy="670.48" r="8.14" />
                 </g>
               </g>
             </svg>
@@ -502,9 +499,22 @@
   }
 
   .ground {
-    fill: rgba(255, 255, 255, 0.3);
+    fill: rgba(255, 255, 255, 0.7);
     &.active {
-      fill: rgba(255, 255, 59, 0.3);
+      fill: rgba(255, 255, 59, 0.8);
+      animation: unset;
+    }
+    transition: all 0.3s;
+    opacity: 1;
+    animation: shine 1s alternate-reverse infinite;
+
+    @keyframes shine {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
     }
   }
 
@@ -675,8 +685,8 @@ export default {
             require('@/assets/env/slider_2.jpg'),
             require('@/assets/env/slider_3.jpg'),
             require('@/assets/env/slider_4.jpg'),
-            require('@/assets/env/3-4.jpg'),
-            require('@/assets/env/3-5.jpg'),
+            // require('@/assets/env/3-4.jpg'),
+            // require('@/assets/env/3-5.jpg'),
           ]
         },
         {

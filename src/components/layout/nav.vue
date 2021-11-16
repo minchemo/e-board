@@ -1,5 +1,10 @@
 <template>
   <div>
+    <div class="logo">
+      <router-link to="/">
+        <img src="@/assets/layout/logo.png" alt="" srcset="" />
+      </router-link>
+    </div>
     <div
       class="navigation"
       ref="navigation"
@@ -30,11 +35,6 @@
           </router-link>
         </template>
       </div>
-      <div class="logo">
-        <router-link to="/">
-          <img src="@/assets/layout/logo.png" alt="" srcset="" />
-        </router-link>
-      </div>
     </div>
     <div
       class="show-navigation"
@@ -52,6 +52,15 @@
 </template>
 
 <style lang="scss" scoped>
+.logo {
+  position: fixed;
+  left: size(30);
+  bottom: size(30);
+  z-index: 1000;
+  img {
+    width: size(230);
+  }
+}
 .navigation {
   left: 0;
   bottom: 0;
@@ -146,14 +155,6 @@
         bottom: -30%;
         transition: all 0.4s;
       }
-    }
-  }
-  .logo {
-    position: absolute;
-    left: size(30);
-    bottom: size(30);
-    img {
-      width: size(230);
     }
   }
 

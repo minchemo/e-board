@@ -20,7 +20,11 @@
     >
       看更多
     </div>
-    <div class="seemore-detail" v-bind:class="{ active: detailOpened }" :key="activaTab.name">
+    <div
+      class="seemore-detail"
+      v-bind:class="{ active: detailOpened }"
+      :key="activaTab.name"
+    >
       <div class="detail-content">
         <div class="title">{{ activaTab.title }}</div>
         <div class="designer">{{ activaTab.designer }}</div>
@@ -108,7 +112,9 @@
       .swiper-slide {
         width: 100%;
         height: 100vh;
-        background-size: cover;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
       }
     }
   }
@@ -293,6 +299,9 @@ export default {
           imgs: [
             require('@/assets/team/s4/1-1.jpg'),
             require('@/assets/team/s4/1-3.jpg'),
+            require('@/assets/team/s4/1-4.jpg'),
+            require('@/assets/team/s4/1-5.jpg'),
+            require('@/assets/team/s4/1-6.jpg'),
           ],
           qr: require('@/assets/team/s4/1-qr.svg'),
         },
@@ -308,6 +317,9 @@ export default {
           imgs: [
             require('@/assets/team/s4/2-1.jpg'),
             require('@/assets/team/s4/2-2.jpg'),
+            require('@/assets/team/s4/2-3.jpg'),
+            require('@/assets/team/s4/2-4.jpg'),
+            require('@/assets/team/s4/2-5.jpg'),
           ],
         },
         {
@@ -323,6 +335,9 @@ export default {
           imgs: [
             require('@/assets/team/s4/3-1.jpg'),
             require('@/assets/team/s4/3-2.jpg'),
+            require('@/assets/team/s4/3-3.jpg'),
+            require('@/assets/team/s4/3-4.jpg'),
+            require('@/assets/team/s4/3-5.jpg'),
           ],
         },
         {
@@ -335,6 +350,9 @@ export default {
           imgs: [
             require('@/assets/team/s4/4-1.jpg'),
             require('@/assets/team/s4/4-2.jpg'),
+            require('@/assets/team/s4/4-3.jpg'),
+            require('@/assets/team/s4/4-4.jpg'),
+            require('@/assets/team/s4/4-5.jpg'),
           ],
         },
       ],

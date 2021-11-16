@@ -607,8 +607,8 @@ export default {
           ],
         },
       ],
-      selectedFloor: "12-22f",
-      scaleLevel: 0.5,
+      selectedFloor: "4-10f",
+      scaleLevel: 0.75,
       dragPos: { x: 0, y: 0 },
       activeDetailImg: [],
     };

@@ -573,14 +573,6 @@
     }
   }
 }
-
-@media screen and (max-width: 1366px) {
-  .s3-svg {
-    bottom: 1%;
-    width: 132%;
-    left: -16%;
-  }
-}
 </style>
 <style lang="scss" scoped>
 .env {

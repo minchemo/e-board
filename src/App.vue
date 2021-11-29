@@ -2,7 +2,7 @@
   <div id="app">
     <router-view :key="$route.fullPath" />
     <Rotate />
-    <div class="version">1.0</div>
+    <!-- <div class="version">1.0</div> -->
   </div>
 </template>
 
